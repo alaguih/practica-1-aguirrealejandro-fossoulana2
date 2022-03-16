@@ -26,6 +26,8 @@ public class Table {
     }
 
     public static boolean canPlay(Card c){
+        //PRE:The table and the Card c have to be created.
+        //POST:It will be returned true if the card c can be placed and false otherwise.
         int n=c.getNumCard();
         Suit s=c.getSuitCard();
         if (n==5){
@@ -59,6 +61,8 @@ public class Table {
     }
 
     public static boolean putCard(Card c){
+        //PRE:The card c and the Desk have to be created.
+        //POST:It will be returned true if the card is putted on the desk and false otherwise.
         if (!canPlay(c)){
             return false;
         }
@@ -98,6 +102,8 @@ public class Table {
     }
 
     public String showTable(){
+        //PRE:The Desk has to be created.
+        //Post:It will be returned a String of the cards on the desk.
         String p1="";
         String p2="";
         String p3="";
