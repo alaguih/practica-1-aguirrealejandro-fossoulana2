@@ -3,9 +3,9 @@ package main;
 
 public class Card {
     private int num;
-    private Suit suit;
+    private String suit;
 
-    public Card(int n, Suit s){
+    public Card(int n, String s){
         this.num=n;
         this.suit=s;
     }
@@ -14,7 +14,7 @@ public class Card {
         return this.num;
     }
 
-    public Suit getSuitCard() {
+    public String getSuitCard() {
         return this.suit;
     }
 
@@ -22,3 +22,4 @@ public class Card {
         return "Number " + this.num + " suit " + this.suit;
     }
 }
+

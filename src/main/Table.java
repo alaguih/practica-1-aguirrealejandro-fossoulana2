@@ -11,6 +11,7 @@ public class Table {
     private static Deque<Card> columnCups;
     private static Deque<Card> columnSwords;
     private static Deque<Card> columnClubs;
+
     public Table(){
         //PRE:
         //POST:Creates the 4 empty structures with capacity of 10.
@@ -29,29 +30,29 @@ public class Table {
         //PRE:The table and the Card c have to be created.
         //POST:It will be returned true if the card c can be placed and false otherwise.
         int n=c.getNumCard();
-        Suit s=c.getSuitCard();
+        String s=c.getSuitCard();
         if (n==5){
             return true;
         }
-        if (s==Suit.Golds){
+        if (s=="golds"){
             if ((columnGolds.getFirst().getNumCard()==n-1) || (columnGolds.getLast().getNumCard()==n+1)){
                 return true;
             }
             return false;
         }
-        if (s==Suit.Swords){
+        if (s=="swords"){
             if ((columnSwords.getFirst().getNumCard()==n-1) || (columnSwords.getLast().getNumCard()==n+1)){
                 return true;
             }
             return false;
         }
-        if (s==Suit.Cups){
+        if (s=="cups"){
             if ((columnCups.getFirst().getNumCard()==n-1) || (columnCups.getLast().getNumCard()==n+1)){
                 return true;
             }
             return false;
         }
-        if (s==Suit.Clubs){
+        if (s=="clubs"){
             if ((columnClubs.getFirst().getNumCard()==n-1) || (columnClubs.getLast().getNumCard()==n+1)){
                 return true;
             }
@@ -67,30 +68,30 @@ public class Table {
             return false;
         }
         int n=c.getNumCard();
-        Suit s=c.getSuitCard();
+        String s=c.getSuitCard();
         switch (s){
-            case Golds:
+            case "golds":
                 if (columnGolds.getFirst().getNumCard()==n-1){
                     columnGolds.addFirst(c);
                 }
                 else {
                     columnGolds.addLast(c);
                 }
-            case Swords:
+            case "swords":
                 if (columnSwords.getFirst().getNumCard()==n-1){
                     columnSwords.addFirst(c);
                 }
                 else {
                     columnSwords.addLast(c);
                 }
-            case Cups:
+            case "cups":
                 if (columnCups.getFirst().getNumCard()==n-1){
                     columnCups.addFirst(c);
                 }
                 else {
                     columnCups.addLast(c);
                 }
-            case Clubs:
+            case "clubs":
                 if (columnClubs.getFirst().getNumCard()==n-1){
                     columnClubs.addFirst(c);
                 }
@@ -101,7 +102,7 @@ public class Table {
         return true;
     }
 
-    public String showTable(){
+    public static String showTable(){
         //PRE:The Desk has to be created.
         //Post:It will be returned a String of the cards on the desk.
         String p1="";
@@ -135,3 +136,4 @@ public class Table {
 
 
 }
+

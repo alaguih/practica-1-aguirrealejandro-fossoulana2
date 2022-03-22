@@ -14,25 +14,25 @@ public class Deck{
         while(i<48){
             int j=1;
             while(j<=12){
-                baraja.add(new Card(j,Suit.Golds));
+                baraja.add(new Card(j,"golds"));
                 j++;
                 i++;
             }
             j=1;
             while(j<=12){
-                baraja.add(new Card(j,Suit.Swords));
+                baraja.add(new Card(j,"swords"));
                 j++;
                 i++;
             }
             j=1;
             while(j<=12){
-                baraja.add(new Card(j,Suit.Clubs));
+                baraja.add(new Card(j,"clubs"));
                 j++;
                 i++;
             }
             j=1;
             while(j<=12){
-                baraja.add(new Card(j,Suit.Cups));
+                baraja.add(new Card(j,"cups"));
                 j++;
                 i++;
             }
@@ -83,3 +83,4 @@ public class Deck{
 
 
 }
+
