@@ -52,7 +52,15 @@ public abstract class Player {
         return s;
     }
 
-    public abstract void play();
+    public void getCard(Card c){
+        this.cards.add(c);
+    }
+
+    public ArrayList<Card> hand(){
+        return this.cards;
+    }
+
+    public abstract Card playCard();
 
 
 }

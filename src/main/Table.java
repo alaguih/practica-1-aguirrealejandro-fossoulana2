@@ -1,10 +1,7 @@
 //Clase
 package main;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.List;
+import java.util.*;
 
 public class Table {
     private static Deque<Card> columnGolds;
@@ -68,31 +65,31 @@ public class Table {
             return false;
         }
         int n=c.getNumCard();
-        String s=c.getSuitCard();
+        String s=c.getSuitCard().toLowerCase(Locale.ROOT);
         switch (s){
             case "golds":
-                if (columnGolds.getFirst().getNumCard()==n-1){
+                if (columnGolds.getFirst().getNumCard()==n-1 || n==5){
                     columnGolds.addFirst(c);
                 }
                 else {
                     columnGolds.addLast(c);
                 }
             case "swords":
-                if (columnSwords.getFirst().getNumCard()==n-1){
+                if (columnSwords.getFirst().getNumCard()==n-1 || n==5){
                     columnSwords.addFirst(c);
                 }
                 else {
                     columnSwords.addLast(c);
                 }
             case "cups":
-                if (columnCups.getFirst().getNumCard()==n-1){
+                if (columnCups.getFirst().getNumCard()==n-1 || n==5){
                     columnCups.addFirst(c);
                 }
                 else {
                     columnCups.addLast(c);
                 }
             case "clubs":
-                if (columnClubs.getFirst().getNumCard()==n-1){
+                if (columnClubs.getFirst().getNumCard()==n-1 || n==5){
                     columnClubs.addFirst(c);
                 }
                 else {
